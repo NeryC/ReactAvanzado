@@ -1,5 +1,4 @@
 import React, { createContext, useState } from 'react'
-
 export const Context = createContext()
 
 const Provider = ({ children }) => {
@@ -18,12 +17,14 @@ const Provider = ({ children }) => {
       window.sessionStorage.removeItem('token')
     }
   }
+
   return (
     <Context.Provider value={value}>
       {children}
     </Context.Provider>
   )
 }
+
 export default {
   Provider,
   Consumer: Context.Consumer
